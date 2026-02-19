@@ -29,6 +29,7 @@ jobs:
       with:
         username: ${{ secrets.SFTP_USERNAME }}
         server: ${{ secrets.SFTP_SERVER }}
+        port: 22
         ssh_private_key: ${{ secrets.SFTP_SSH_KEY }}
         # Or use password if you prefer, but SSH Key is recommended for SFTP
         password: ${{ secrets.SFTP_PASSWORD }}
