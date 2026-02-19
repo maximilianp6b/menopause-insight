@@ -31,4 +31,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: ./ # Adjust this to your remote folder if needed
+        server-dir: smarter-choices-wellness/htdocs/wellness.smarter-choices.com/max-testing/
