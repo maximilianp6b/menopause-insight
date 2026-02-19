@@ -33,5 +33,5 @@ jobs:
         # Or use password if you prefer, but SSH Key is recommended for SFTP
         password: ${{ secrets.SFTP_PASSWORD }}
         local_path: ./dist/*
-        remote_path: smarter-choices-wellness/htdocs/wellness.smarter-choices-wellness.com/max-testing/
+        remote_path: smarter-choices-wellness/htdocs/wellness.smarter-choices.com/max-testing/
         delete_remote_files: false
