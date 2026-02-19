@@ -1,59 +1,61 @@
 <!DOCTYPE html>
+<!-- Build: 2026-02-19-V3 -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Special Report: The Menopause Gap</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                50: '#f2f9f9',
-                100: '#dfeceb',
-                200: '#c1dcdb',
-                300: '#95c3c1',
-                400: '#64a3a1',
-                500: '#468786',
-                600: '#356d6d',
-                700: '#2d5858',
-                800: '#284848',
-                900: '#233c3d',
-              },
-              marketing: {
-                highlight: '#fff9c4', // Pale yellow for text highlights
-                red: '#e53935',       // Urgent red
-                orange: '#f57c00',    // CTA orange
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special Report: The Menopause Gap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f2f9f9',
+              100: '#dfeceb',
+              200: '#c1dcdb',
+              300: '#95c3c1',
+              400: '#64a3a1',
+              500: '#468786',
+              600: '#356d6d',
+              700: '#2d5858',
+              800: '#284848',
+              900: '#233c3d',
             },
-            fontFamily: {
-              serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-              sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'], // Cleaner, more "news" like
-            },
-            boxShadow: {
-              'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
+            marketing: {
+              highlight: '#fff9c4', // Pale yellow for text highlights
+              red: '#e53935',       // Urgent red
+              orange: '#f57c00',    // CTA orange
             }
+          },
+          fontFamily: {
+            serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+            sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'], // Cleaner, more "news" like
+          },
+          boxShadow: {
+            'soft': '0 4px 20px rgba(0, 0, 0, 0.05)',
           }
         }
       }
-    </script>
-    <style>
-      /* Text highlighting effect common in advertorials */
-      .highlight {
-        background-color: #fff9c4;
-        padding: 0 4px;
-        box-decoration-break: clone;
-        -webkit-box-decoration-break: clone;
-      }
-      
-      /* Base font size bump for readability */
-      body {
-        font-size: 18px;
-        line-height: 1.6;
-      }
-    </style>
+    }
+  </script>
+  <style>
+    /* Text highlighting effect common in advertorials */
+    .highlight {
+      background-color: #fff9c4;
+      padding: 0 4px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* Base font size bump for readability */
+    body {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -65,10 +67,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.css">
 </head>
-  <body class="bg-white text-slate-900 font-sans antialiased">
-    <div id="root"></div>
+
+<body class="bg-white text-slate-900 font-sans antialiased">
+  <div id="root"></div>
   <script type="module" src="./index.tsx"></script>
 </body>
+
 </html>
