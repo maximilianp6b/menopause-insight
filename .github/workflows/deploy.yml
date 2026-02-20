@@ -22,15 +22,20 @@ jobs:
       run: npm install
 
     - name: 🏗️ Build project
-      run: npm run build
+      run: |
+        npm run build
+        cp debug.txt dist/
+        mv dist max-testing
+        echo "Prepared max-testing folder content:"
+        ls -R max-testing/
 
     - name: 🚀 Deploy via SFTP
-      uses: nuno-fernandes/sftp-deploy-action@v1.2.0
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.SFTP_SERVER }}
         username: ${{ secrets.SFTP_USERNAME }}
-        password: ${{ secrets.SFTP_PASSWORD }}
+        server: ${{ secrets.SFTP_SERVER }}
         port: 22
-        local_path: dist
-        remote_path: /home/smarter-choices-wellness/htdocs/wellness.smarter-choices.com/max-testing
-        delete_remote_files: true
+        password: ${{ secrets.SFTP_PASSWORD }}
+        local_path: max-testing/
+        remote_path: /home/smarter-choices-wellness/htdocs/wellness.smarter-choices.com/
+        delete_remote_files: false
