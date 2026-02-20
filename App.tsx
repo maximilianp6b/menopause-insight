@@ -5,7 +5,7 @@ import { ArticlePage } from './pages/ArticlePage';
 
 function App() {
   return (
-    <BrowserRouter basename="/max-testing">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/the-menopause-gap" element={<ArticlePage />} />
