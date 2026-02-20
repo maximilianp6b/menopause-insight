@@ -25,13 +25,12 @@ jobs:
       run: npm run build
 
     - name: 🚀 Deploy via SFTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.SFTP_SERVER }}
         username: ${{ secrets.SFTP_USERNAME }}
-        password: ${{ secrets.SFTP_PASSWORD }}
-        protocol: sftp
+        server: ${{ secrets.SFTP_SERVER }}
         port: 22
-        local-dir: ./dist/
-        server-dir: /home/smarter-choices-wellness/htdocs/wellness.smarter-choices.com/max-testing/
-        dangerous-clean-slate: true
+        password: ${{ secrets.SFTP_PASSWORD }}
+        local_path: dist/
+        remote_path: /home/smarter-choices-wellness/htdocs/wellness.smarter-choices.com/max-testing/
+        delete_remote_files: true
